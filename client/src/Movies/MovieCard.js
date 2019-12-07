@@ -1,6 +1,7 @@
 import React from "react";
 
 const MovieCard = props => {
+  console.log(props);
   return (
     <div className="movie-card">
       <h2>{props.title2}</h2>
@@ -17,6 +18,7 @@ const MovieCard = props => {
           {star}
         </div>
       ))}
+      <button onClick={props.saveMovie}>Save</button>
     </div>
   );
 };

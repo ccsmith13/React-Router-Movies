@@ -22,7 +22,7 @@ const Movie = props => {
   }, []);
 
   // Uncomment this only when you have moved on to the stretch goals
-  const saveMovie = props => {
+  const saveMovie = () => {
     const addToSavedList = props.addToSavedList;
     addToSavedList(movie);
   };
@@ -32,12 +32,14 @@ const Movie = props => {
   }
 
   const { title, director, metascore, stars } = movie;
+
   return (
     <MovieCard
       title2={title}
       director2={director}
       metascore2={metascore}
       stars2={stars}
+      saveMovie={saveMovie}
     />
   );
 };
